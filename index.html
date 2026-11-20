@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traiteur Tijani | Cuisine Marocaine Authentique à Kénitra</title>
-    <meta name="description" content="Service de traiteur marocain authentique à Kénitra. Mariages, fiançailles, fêtes privées et événements d'entreprise.">
+    <title>Dar Rbati Catering | High-End Event Caterer</title>
+    <meta name="description" content="A high-end event caterer in Rabat, Salé, and Témara. Refined Moroccan cuisine and turnkey service to make every one of your events unforgettable.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,34 +17,31 @@
     <style>
         /* --- CSS VARIABLES & RESET --- */
         :root {
-            --primary-color: #8B2635; /* Deep Moroccan Red/Terracotta */
-            --primary-dark: #6A1C28;
-            --accent-color: #D4AF37; /* Elegant Gold */
-            --bg-color: #FDFBF7; /* Warm Cream */
+            --bg-color: #FDFBF7;
             --text-color: #4A4A4A;
-            --heading-color: #2C2C2C;
+            --heading-color: #1A1A1A;
+            --accent-color: #C5A059; /* Elegant Gold */
+            --accent-dark: #A88645;
+            --dark-bg: #1A1A1A;
             --white: #FFFFFF;
             --font-heading: 'Playfair Display', serif;
-            --font-body: 'Lato', sans-serif;
+            --font-body: 'Inter', sans-serif;
             --section-padding: 5rem 1.5rem;
             --max-width: 1200px;
-            --shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        html { scroll-behavior: smooth; }
         
         body {
             font-family: var(--font-body);
             background-color: var(--bg-color);
             color: var(--text-color);
-            line-height: 1.7;
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--heading-color); font-weight: 600; line-height: 1.3; }
-        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+        h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--heading-color); font-weight: 600; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
         img { max-width: 100%; display: block; object-fit: cover; }
 
@@ -54,43 +51,55 @@
             display: inline-block;
             padding: 0.9rem 2rem;
             border-radius: 4px;
-            font-weight: 700;
+            font-weight: 500;
             letter-spacing: 0.5px;
             text-transform: uppercase;
             font-size: 0.85rem;
             cursor: pointer;
-            transition: all 0.3s ease;
         }
-        .btn-primary { background-color: var(--primary-color); color: var(--white); border: 2px solid var(--primary-color); }
-        .btn-primary:hover { background-color: var(--primary-dark); border-color: var(--primary-dark); transform: translateY(-2px); }
+        .btn-primary { background-color: var(--accent-color); color: var(--white); border: 2px solid var(--accent-color); }
+        .btn-primary:hover { background-color: var(--accent-dark); border-color: var(--accent-dark); }
         .btn-outline { background-color: transparent; color: var(--white); border: 2px solid var(--white); }
-        .btn-outline:hover { background-color: var(--white); color: var(--primary-color); }
-        .btn-accent { background-color: var(--accent-color); color: var(--white); border: 2px solid var(--accent-color); }
-        .btn-accent:hover { background-color: #b8962e; border-color: #b8962e; }
+        .btn-outline:hover { background-color: var(--white); color: var(--heading-color); }
+        .btn-dark { background-color: var(--dark-bg); color: var(--white); border: 2px solid var(--dark-bg); }
+        .btn-dark:hover { background-color: var(--accent-color); border-color: var(--accent-color); }
         
-        .section-header { text-align: center; margin-bottom: 3.5rem; }
-        .section-header h2 { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 0.8rem; }
-        .section-header p { font-size: 1.1rem; max-width: 650px; margin: 0 auto; color: #666; }
-        .divider { width: 60px; height: 3px; background-color: var(--accent-color); margin: 1rem auto; }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .section-title::after {
+            content: "❖";
+            display: block;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+        .section-subtitle { text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem; }
+
+        /* --- TOP BAR --- */
+        .top-bar { background-color: var(--dark-bg); color: var(--white); text-align: center; padding: 0.5rem; font-size: 0.85rem; letter-spacing: 1px; }
 
         /* --- HEADER --- */
-        header { background-color: var(--white); box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        header { background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
         .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; max-width: var(--max-width); margin: 0 auto; }
-        .logo { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700; color: var(--primary-color); }
+        .logo { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700; color: var(--heading-color); }
         .logo span { color: var(--accent-color); }
         .nav-links { display: flex; gap: 2rem; align-items: center; }
-        .nav-links a { font-weight: 600; font-size: 0.95rem; color: var(--heading-color); position: relative; }
-        .nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--accent-color); transition: width 0.3s; }
-        .nav-links a:hover { color: var(--primary-color); }
-        .nav-links a:hover::after { width: 100%; }
-        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
+        .nav-links a { font-weight: 500; font-size: 0.95rem; color: var(--heading-color); }
+        .nav-links a:hover { color: var(--accent-color); }
+        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; }
 
         /* --- HERO --- */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            height: 90vh;
+            height: 85vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -98,108 +107,96 @@
             color: var(--white);
             padding: 0 1.5rem;
         }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; color: var(--white); text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-        .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 2.5rem; font-weight: 300; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; color: var(--white); }
+        .hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto 2rem; font-weight: 300; }
         .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-        /* --- SERVICES --- */
-        .services { padding: var(--section-padding); background-color: var(--white); }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
-        .service-card { background: var(--bg-color); padding: 2.5rem 2rem; text-align: center; border-radius: 8px; border: 1px solid #eee; transition: all 0.3s ease; }
-        .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); border-color: var(--accent-color); }
-        .service-icon { width: 70px; height: 70px; background-color: rgba(139, 38, 53, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; }
-        .service-icon i { font-size: 1.8rem; color: var(--primary-color); }
-        .service-card h3 { font-size: 1.4rem; margin-bottom: 1rem; }
-        .service-card p { margin-bottom: 1.5rem; font-size: 0.95rem; }
-        .text-link { color: var(--primary-color); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; }
-        .text-link:hover { color: var(--accent-color); }
+        /* --- STATS --- */
+        .stats { background-color: var(--white); padding: 3rem 1.5rem; border-bottom: 1px solid #eee; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center; max-width: var(--max-width); margin: 0 auto; }
+        .stat-item h3 { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 0.5rem; }
+        .stat-item p { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-color); }
 
-        /* --- MENU --- */
-        .menu { padding: var(--section-padding); background-color: var(--bg-color); }
-        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
-        .menu-item { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; }
-        .menu-img { height: 220px; width: 100%; }
-        .menu-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
-        .menu-content h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary-color); }
-        .menu-content p { font-size: 0.95rem; color: #666; flex-grow: 1; }
-        .menu-tag { display: inline-block; background-color: rgba(212, 175, 55, 0.2); color: #8a701e; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.8rem; width: fit-content; }
-
-        /* --- BLOG --- */
-        .blog { padding: var(--section-padding); background-color: var(--white); }
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .blog-card { border-radius: 8px; overflow: hidden; background: var(--bg-color); transition: 0.3s; }
-        .blog-card:hover { box-shadow: var(--shadow); }
-        .blog-img { height: 200px; width: 100%; }
-        .blog-content { padding: 1.5rem; }
-        .blog-category { color: var(--accent-color); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem; display: block; }
-        .blog-content h3 { font-size: 1.2rem; margin-bottom: 0.8rem; }
-        .blog-date { font-size: 0.85rem; color: #888; margin-bottom: 1rem; display: block; }
-
-        /* --- TESTIMONIAL --- */
-        .testimonial { background-color: var(--primary-color); color: var(--white); padding: 5rem 1.5rem; text-align: center; }
-        .testimonial-container { max-width: 800px; margin: 0 auto; }
-        .testimonial i { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1.5rem; opacity: 0.8; }
-        .testimonial p { font-size: 1.3rem; font-style: italic; line-height: 1.8; margin-bottom: 2rem; font-family: var(--font-heading); }
-        .testimonial h4 { font-size: 1.2rem; color: var(--accent-color); }
-        .testimonial span { font-size: 0.9rem; opacity: 0.8; }
-
-        /* --- CONTACT --- */
-        .contact { padding: var(--section-padding); background-color: var(--bg-color); }
-        .contact-wrapper { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; }
-        .contact-info h3 { font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--primary-color); }
-        .info-item { display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start; }
-        .info-item i { color: var(--accent-color); font-size: 1.2rem; margin-top: 4px; width: 20px; }
-        .info-item p { margin: 0; }
-        .info-item a { color: var(--text-color); }
-        .info-item a:hover { color: var(--primary-color); }
+        /* --- STORY & PERSONALISATION --- */
+        .story { padding: var(--section-padding); }
+        .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+        .story-content h2 { font-size: 2.2rem; margin-bottom: 1.5rem; }
+        .story-content p { margin-bottom: 1.5rem; }
+        .check-list li { margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 0.8rem; }
+        .check-list i { color: var(--accent-color); margin-top: 4px; }
         
-        .contact-form { background: var(--white); padding: 2.5rem; border-radius: 8px; box-shadow: var(--shadow); }
-        .form-group { margin-bottom: 1.2rem; }
-        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem; }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; font-family: var(--font-body); font-size: 0.95rem; transition: 0.3s;
+        .personalisation { background-color: #F4F1EA; padding: var(--section-padding); }
+        .event-tags { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; justify-content: center; }
+        .tag { background: var(--white); padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.9rem; border: 1px solid #ddd; transition: 0.3s; }
+        .tag:hover { border-color: var(--accent-color); color: var(--accent-color); }
+
+        /* --- GALLERY --- */
+        .gallery { padding: var(--section-padding); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .gallery-item { height: 300px; overflow: hidden; border-radius: 4px; position: relative; }
+        .gallery-item img { width: 100%; height: 100%; transition: transform 0.5s; }
+        .gallery-item:hover img { transform: scale(1.05); }
+
+        /* --- VIDEO SECTION --- */
+        .video-section { background-color: var(--dark-bg); color: var(--white); padding: var(--section-padding); text-align: center; }
+        .video-placeholder { 
+            max-width: 800px; margin: 2rem auto 0; aspect-ratio: 16/9; background: #333; 
+            display: flex; align-items: center; justify-content: center; border-radius: 8px;
+            cursor: pointer; transition: 0.3s;
         }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(139, 38, 53, 0.1); }
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .video-placeholder:hover { background: #444; }
+        .video-placeholder i { font-size: 4rem; color: var(--accent-color); }
+
+        /* --- SERVICES --- */
+        .services { padding: var(--section-padding); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .service-card { background: var(--white); padding: 2.5rem 2rem; text-align: center; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.3s; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .service-card i { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1.5rem; }
+        .service-card h3 { font-size: 1.4rem; margin-bottom: 1rem; }
+
+        /* --- CTA --- */
+        .cta { background: linear-gradient(rgba(197, 160, 89, 0.9), rgba(197, 160, 89, 0.9)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80'); background-size: cover; padding: 5rem 1.5rem; text-align: center; color: var(--white); }
+        .cta h2 { color: var(--white); font-size: 2.5rem; margin-bottom: 1rem; }
+        .cta p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
 
         /* --- FOOTER --- */
-        footer { background-color: #1a1a1a; color: #aaa; padding: 4rem 1.5rem 2rem; }
+        footer { background-color: var(--dark-bg); color: #ccc; padding: 4rem 1.5rem 2rem; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; max-width: var(--max-width); margin: 0 auto; }
-        .footer-col h4 { color: var(--white); font-size: 1.2rem; margin-bottom: 1.5rem; font-family: var(--font-heading); }
+        .footer-col h4 { color: var(--white); font-size: 1.2rem; margin-bottom: 1.5rem; }
         .footer-col p, .footer-col a { display: block; margin-bottom: 0.8rem; font-size: 0.95rem; }
         .footer-col a:hover { color: var(--accent-color); }
         .social-links { display: flex; gap: 1rem; margin-top: 1rem; }
-        .social-links a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: var(--white); }
-        .social-links a:hover { background: var(--primary-color); }
+        .social-links a { font-size: 1.3rem; }
         .footer-bottom { text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #333; font-size: 0.85rem; }
 
         /* --- RESPONSIVE --- */
-        @media (max-width: 900px) {
-            .contact-wrapper { grid-template-columns: 1fr; gap: 3rem; }
-        }
         @media (max-width: 768px) {
-            .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--white); flex-direction: column; padding: 2rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1); gap: 1.5rem; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--white); flex-direction: column; padding: 2rem; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
             .nav-links.active { display: flex; }
             .mobile-menu-btn { display: block; }
             .hero h1 { font-size: 2.5rem; }
-            .section-header h2 { font-size: 2rem; }
-            .form-row { grid-template-columns: 1fr; }
+            .story-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .section-title { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Top Bar -->
+    <div class="top-bar">Rabat · Salé · Témara</div>
+
     <!-- Header -->
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">Traiteur <span>Tijani</span></a>
+            <a href="#" class="logo">Dar <span>Rbati</span></a>
             <div class="mobile-menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
             <nav class="nav-links" id="navLinks">
+                <a href="#story">Our Story</a>
                 <a href="#services">Services</a>
-                <a href="#menu">Menu</a>
-                <a href="#blog">Blog</a>
+                <a href="#gallery">Gallery</a>
                 <a href="#contact">Contact</a>
-                <a href="https://wa.me/212657735378" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Devis</a>
+                <a href="tel:+212666543505" class="btn btn-primary">Call Us</a>
             </nav>
         </div>
     </header>
@@ -207,263 +204,182 @@
     <!-- Hero Section -->
     <section class="hero">
         <div>
-            <h1>Une expérience culinaire authentique</h1>
-            <p>Découvrez notre cuisine traditionnelle marocaine préparée avec passion pour vos événements spéciaux à Kénitra et ses environs.</p>
+            <h1>Dar Rbati Catering</h1>
+            <p>A high-end event caterer. Refined Moroccan cuisine and turnkey service to make every one of your events unforgettable.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Demander un devis</a>
-                <a href="#menu" class="btn btn-outline">Voir notre menu</a>
+                <a href="#contact" class="btn btn-primary">Request a Quote</a>
+                <a href="tel:+212666543505" class="btn btn-outline">Call Us</a>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>300+</h3>
+                <p>Events Catered</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Satisfied Clients</p>
+            </div>
+            <div class="stat-item">
+                <h3>4.7 ★</h3>
+                <p>88 Google Reviews</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>At Your Service</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section id="story" class="story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-content">
+                    <h2 class="section-title" style="text-align: left;">Our Story</h2>
+                    <p>Because every celebration is a unique moment for you and your loved ones, we do everything we can to make it a success. A premier caterer in Rabat, Salé and Témara, Dar Rbati brings you its craftsmanship, experience and logistical expertise to bring your finest receptions to life.</p>
+                    <ul class="check-list">
+                        <li><i class="fas fa-check-circle"></i> Listening to your expectations during a personalised meeting.</li>
+                        <li><i class="fas fa-check-circle"></i> A detailed proposal following that consultation.</li>
+                        <li><i class="fas fa-check-circle"></i> Attentive follow-up throughout your event.</li>
+                    </ul>
+                </div>
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1555244162-803794f167d3?auto=format&fit=crop&w=800&q=80" alt="Elegant Moroccan Catering Setup" style="border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personalisation -->
+    <section class="personalisation">
+        <div class="container">
+            <h2 class="section-title">Personalisation</h2>
+            <p class="section-subtitle">Your event is one of a kind. We help you design and imagine the reception that reflects you — true to Moroccan tradition, with a modern touch.</p>
+            <div class="story-grid">
+                <ul class="check-list">
+                    <li><i class="fas fa-star"></i> Several service tiers with menus signed by our Chef.</li>
+                    <li><i class="fas fa-star"></i> A selection of culinary animations to amaze your guests.</li>
+                    <li><i class="fas fa-star"></i> Floral ambiance and full styling of the venue.</li>
+                    <li><i class="fas fa-star"></i> Bespoke table art: from simplicity to pure refinement.</li>
+                </ul>
+                <div>
+                    <p style="margin-bottom: 1rem;"><em>Dar Rbati and its team will craft a service worthy of your event, and a selection of refined menus to delight every one of your guests.</em></p>
+                    <div class="event-tags">
+                        <span class="tag">Weddings & Engagements</span>
+                        <span class="tag">Christenings & Births</span>
+                        <span class="tag">Birthdays & Henna</span>
+                        <span class="tag">Cocktail Receptions</span>
+                        <span class="tag">Business Lunches</span>
+                        <span class="tag">Automotive Events</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Finest Receptions</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80" alt="Event 1"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80" alt="Event 2"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1530103862676-de3c9da59af7?auto=format&fit=crop&w=600&q=80" alt="Event 3"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=600&q=80" alt="Event 4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Dar Rbati in Motion</h2>
+            <div class="video-placeholder">
+                <i class="fas fa-play-circle"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
     <section id="services" class="services">
         <div class="container">
-            <div class="section-header">
-                <h2>Nos Services</h2>
-                <div class="divider"></div>
-                <p>Des solutions créatives et un service d'exception adaptés à vos besoins et à vos traditions.</p>
-            </div>
+            <h2 class="section-title">What We Offer</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-ring"></i></div>
-                    <h3>Mariages</h3>
-                    <p>Organisation complète de votre mariage traditionnel marocain avec une cuisine authentique et un service impeccable.</p>
-                    <a href="#contact" class="text-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    <i class="fas fa-utensils"></i>
+                    <h3>Cuisine</h3>
+                    <p>Refined Moroccan cuisine, elevated by fresh produce and the craft of our Chef. Traditional flavours reimagined with creativity.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-glass-cheers"></i></div>
-                    <h3>Fêtes privées</h3>
-                    <p>Célébrez vos occasions spéciales avec un menu personnalisé et un service sur mesure pour vos invités.</p>
-                    <a href="#contact" class="text-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    <i class="fas fa-birthday-cake"></i>
+                    <h3>Pastry</h3>
+                    <p>For a special occasion or simply to treat yourself, our Moroccan and French pastry is the perfect way to satisfy your sweet tooth.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-heart"></i></div>
-                    <h3>Fiançailles</h3>
-                    <p>Marquez cette étape importante avec un service de traiteur élégant qui respecte les traditions marocaines.</p>
-                    <a href="#contact" class="text-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    <i class="fas fa-couch"></i>
+                    <h3>Structure</h3>
+                    <p>To make your day unforgettable, we bring our logistics: furniture, table dressing, staging and a dedicated team of servers.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Décor</h3>
+                    <p>Stylish lighting, matching linens and floral decoration: it is often the details that impress your guests.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="menu">
+    <!-- CTA -->
+    <section class="cta">
         <div class="container">
-            <div class="section-header">
-                <h2>Découvrez Notre Menu</h2>
-                <div class="divider"></div>
-                <p>Une sélection de nos plats les plus appréciés, préparés avec des ingrédients frais et des recettes traditionnelles.</p>
-            </div>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=600&q=80" alt="Pastilla" class="menu-img">
-                    <div class="menu-content">
-                        <span class="menu-tag">Entrées</span>
-                        <h3>Mini Pastilla Fruits de Mer</h3>
-                        <p>Feuilleté croustillant garni d'un mélange onctueux de fruits de mer. Un mariage subtil entre tradition et saveurs iodées.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Salade" class="menu-img">
-                    <div class="menu-content">
-                        <span class="menu-tag">Entrées</span>
-                        <h3>Salade Pêcheur</h3>
-                        <p>Mélange frais de fruits de mer, légumes croquants et vinaigrette légère. Un vent marin en bouche, parfait pour commencer en légèreté.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=600&q=80" alt="Pastilla Poulet" class="menu-img">
-                    <div class="menu-content">
-                        <span class="menu-tag">Plats Principaux</span>
-                        <h3>Pastilla Poulet Amande</h3>
-                        <p>Feuilles croustillantes garnies de poulet effiloché et d'amandes sucrées. Un classique marocain entre sucré et salé, riche en arômes.</p>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="#contact" class="btn btn-accent">Demander un devis personnalisé</a>
-            </div>
+            <h2>Let's Talk About Your Event</h2>
+            <p>Entrust us with your project: we bring our expertise, our professional eye and a tailored quote to fit your budget.</p>
+            <a href="https://wa.me/212666543505" class="btn btn-dark"><i class="fab fa-whatsapp"></i> Request a Quote on WhatsApp</a>
         </div>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="blog">
-        <div class="container">
-            <div class="section-header">
-                <h2>Notre Blog</h2>
-                <div class="divider"></div>
-                <p>Découvrez nos derniers articles sur la gastronomie et les traditions marocaines.</p>
-            </div>
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80" alt="Mariage" class="blog-img">
-                    <div class="blog-content">
-                        <span class="blog-category">Mariage</span>
-                        <h3>Les traditions culinaires du mariage marocain</h3>
-                        <span class="blog-date">10 avril 2024</span>
-                        <a href="#" class="text-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80" alt="Fiançailles" class="blog-img">
-                    <div class="blog-content">
-                        <span class="blog-category">Fiançailles</span>
-                        <h3>Les saveurs des fiançailles marocaines</h3>
-                        <span class="blog-date">28 mai 2024</span>
-                        <a href="#" class="text-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1530103862676-de3c9da59af7?auto=format&fit=crop&w=600&q=80" alt="Célébration" class="blog-img">
-                    <div class="blog-content">
-                        <span class="blog-category">Célébration</span>
-                        <h3>La célébration culinaire de la circoncision au Maroc</h3>
-                        <span class="blog-date">17 juillet 2024</span>
-                        <a href="#" class="text-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonial Section -->
-    <section class="testimonial">
-        <div class="testimonial-container">
-            <i class="fas fa-quote-left"></i>
-            <p>"Merci 3la kola d9i9a knto m3aya wlkhatr likhdito li hsit brassi dk nhar que khdamin m3a whda mn 3a2ila. Ahsn traiteur khdmt m3ah, qualité w ta3amol toop."</p>
-            <h4>Ouiam Bridji</h4>
-            <span>Client fidèle</span>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contactez-nous</h2>
-                <div class="divider"></div>
-                <p>Nous sommes à votre écoute pour répondre à vos questions et élaborer votre événement.</p>
-            </div>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h3>Informations</h3>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>N 2, souhaila magasin, mimosas, residence,<br>Rue Zamzam, Kénitra 14000</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <p><a href="https://wa.me/212657735378">+212 657 735 378</a></p>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <p><a href="tel:+212530326201">+212 530 326 201</a><br><a href="tel:+212669899098">+212 669 899 098</a></p>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <p><a href="mailto:contact@tijani.ma">contact@tijani.ma</a></p>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <p>Lun - Ven: 9h00 - 18h00<br>Sam: 9h00 - 13h00</p>
-                    </div>
-                    <div class="social-links" style="margin-top: 2rem;">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/212657735378"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-
-                <!-- Note: For a working form on GitHub Pages, sign up at formspree.io and replace the action URL below -->
-                <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Nom complet *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">Téléphone *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="guests">Nombre d'invités *</label>
-                            <input type="number" id="guests" name="guests" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="event-type">Type d'événement *</label>
-                        <select id="event-type" name="event-type" required>
-                            <option value="">Sélectionnez</option>
-                            <option value="mariage">Mariage</option>
-                            <option value="fete-privee">Fête privée</option>
-                            <option value="fiancailles">Fiançailles</option>
-                            <option value="entreprise">Événement d'entreprise</option>
-                            <option value="ftour">Ftour Ramadan</option>
-                            <option value="circoncision">Circoncision</option>
-                            <option value="aqiqa">Aqiqa</option>
-                            <option value="soutenance">Soutenance</option>
-                            <option value="autre">Autre</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="date">Date de l'événement *</label>
-                        <input type="date" id="date" name="date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer la demande</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
+    <!-- Footer / Contact -->
+    <footer id="contact">
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>Traiteur Tijani</h4>
-                <p>Votre partenaire de confiance pour une expérience culinaire marocaine authentique et inoubliable à Kénitra et ses environs.</p>
+                <h4>Dar Rbati Catering</h4>
+                <p>A high-end event caterer bringing refined Moroccan cuisine and turnkey service to Rabat, Salé, and Témara.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/212666543505"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
             <div class="footer-col">
-                <h4>Liens Rapides</h4>
-                <a href="#services">Nos Services</a>
-                <a href="#menu">Le Menu</a>
-                <a href="#blog">Blog</a>
-                <a href="#contact">Demander un devis</a>
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt" style="width: 20px;"></i> Immeuble 13, Résidence Machaa Lah 2<br>Lotissement Al Moustakbal, Témara 12020</p>
+                <p><i class="fas fa-phone" style="width: 20px;"></i> <a href="tel:+212666543505">+212 666 543 505</a></p>
+                <p><i class="fas fa-clock" style="width: 20px;"></i> Open 24/7 — Every day</p>
             </div>
             <div class="footer-col">
-                <h4>Légal</h4>
-                <a href="#">Politique de confidentialité</a>
-                <a href="#">Mentions légales</a>
+                <h4>Quick Links</h4>
+                <a href="#story">Our Story</a>
+                <a href="#services">Services</a>
+                <a href="#gallery">Gallery</a>
+                <a href="https://wa.me/212666543505">Request a Quote</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Traiteur Tijani. Tous droits réservés. | Prototype de réplica à des fins éducatives.</p>
+            <p>&copy; 2024 Dar Rbati Catering. All rights reserved. | Prototype for educational purposes.</p>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
+        // Simple mobile menu toggle
         function toggleMenu() {
             const nav = document.getElementById('navLinks');
             nav.classList.toggle('active');
         }
-
-        // Close mobile menu when a link is clicked
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('navLinks').classList.remove('active');
-            });
-        });
     </script>
 </body>
 </html>
