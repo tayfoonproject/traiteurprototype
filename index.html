@@ -71,7 +71,7 @@
 
         /* Hero */
         .hero { height: 100vh; width: 100%; position: relative; display: flex; align-items: center; justify-content: center; background: #000; color: var(--white); text-align: center; padding-top: 80px; }
-        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; z-index: 1; }
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.45; z-index: 1; }
         .hero-content { position: relative; z-index: 3; max-width: 900px; padding: 0 1.5rem; width: 100%; }
         .hero-content h1 { font-size: 4rem; margin-bottom: 1rem; color: var(--white); line-height: 1.1; }
         .hero-content p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem; font-weight: 300; opacity: 0.9; }
@@ -130,7 +130,7 @@
         .dot.active { background: var(--accent-color); width: 30px; border-radius: 5px; }
 
         /* CTA */
-        .cta { background: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; padding: 6rem 1.5rem; text-align: center; color: var(--white); }
+        .cta { background: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('https://image.qwenlm.ai/public_source/8d752b1f-cf21-490c-b4ba-bb494afcb669/7a35b23fc-43fc-463a-a26a-628f261b0fdb5990.png'); background-size: cover; background-position: center; padding: 6rem 1.5rem; text-align: center; color: var(--white); }
         .cta h2 { color: var(--white); font-size: 2.8rem; margin-bottom: 1rem; }
         .cta p { font-size: 1.2rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9; }
 
@@ -163,8 +163,7 @@
             .hero-content h1 { font-size: 2.5rem; }
             .stats-grid { grid-template-columns: 1fr; }
             .gallery-item { flex: 0 0 280px; height: 380px; }
-            /* Hide arrows on mobile, keep swipe and dots */
-            .gallery-btn { display: none; } 
+            .gallery-btn { display: none; }
         }
     </style>
 </head>
@@ -213,15 +212,14 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1920&q=80" class="hero-bg" alt="Background">
+        <img src="https://image.qwenlm.ai/public_source/8d752b1f-cf21-490c-b4ba-bb494afcb669/5a35b23fc-43fc-463a-a26a-628f261b0fdb9158.png" class="hero-bg" alt="Traditional Moroccan Wedding">
         <div class="hero-content">
             <h1 data-i18n="hero_title">Dar Rbati Catering</h1>
             <p data-i18n="hero_desc">A high-end event caterer. Refined Moroccan cuisine and manners to make every event unforgettable.</p>
             
             <!-- Video Section -->
             <div class="hero-video-container">
-                <!-- Replace 'your-video.mp4' with your actual video file later. Add 'controls' to let users play it. -->
-                <video poster="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" muted loop playsinline>
+                <video poster="https://image.qwenlm.ai/public_source/8d752b1f-cf21-490c-b4ba-bb494afcb669/0a35b23fc-43fc-463a-a26a-628f261b0fdb7076.png" controls muted loop playsinline>
                     <source src="your-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -248,7 +246,7 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about-grid">
-                <div class="about-img"><img src="https://images.unsplash.com/photo-1555244162-803794f167d3?auto=format&fit=crop&w=800&q=80" alt="Dar Rbati"></div>
+                <div class="about-img"><img src="https://image.qwenlm.ai/public_source/8d752b1f-cf21-490c-b4ba-bb494afcb669/2a35b23fc-43fc-463a-a26a-628f261b0fdb3038.png" alt="Moroccan Reception Table"></div>
                 <div class="about-content">
                     <h2 class="section-title" style="text-align: left;" data-i18n="about_title">Our Story</h2>
                     <p data-i18n="about_text">Because every celebration is a unique moment for you and your loved ones, we do everything we can to make it a success. A premier caterer, Dar Rbati brings you its craftsmanship, experience and logistical expertise to bring your finest receptions to life.</p>
@@ -296,12 +294,12 @@
             <div class="gallery-wrapper">
                 <button class="gallery-btn gallery-prev" onclick="scrollGallery(-1)"><i class="fas fa-chevron-left"></i></button>
                 <div class="gallery-scroll" id="galleryScroll">
-                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80" alt="Event"></div>
-                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80" alt="Event"></div>
-                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1530103862676-de3c9da59af7?auto=format&fit=crop&w=600&q=80" alt="Event"></div>
-                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=600&q=80" alt="Event"></div>
-                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80" alt="Event"></div>
-                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1478146059778-26028b07395a?auto=format&fit=crop&w=600&q=80" alt="Event"></div>
+                    <div class="gallery-item"><img src="https://image.qwenlm.ai/public_source/8d752b1f-cf21-490c-b4ba-bb494afcb669/1a35b23fc-43fc-463a-a26a-628f261b0fdb8336.png" alt="Henna Celebration"></div>
+                    <div class="gallery-item"><img src="https://image.qwenlm.ai/public_source/8d752b1f-cf21-490c-b4ba-bb494afcb669/3a35b23fc-43fc-463a-a26a-628f261b0fdb7746.png" alt="Moroccan Feast"></div>
+                    <div class="gallery-item"><img src="https://image.qwenlm.ai/public_source/8d752b1f-cf21-490c-b4ba-bb494afcb669/4a35b23fc-43fc-463a-a26a-628f261b0fdb7706.png" alt="Pastilla"></div>
+                    <div class="gallery-item"><img src="https://image.qwenlm.ai/public_source/8d752b1f-cf21-490c-b4ba-bb494afcb669/3a35b23fc-43fc-463a-a26a-628f261b0fdb2690.png" alt="Riad Lounge Decor"></div>
+                    <div class="gallery-item"><img src="https://image.qwenlm.ai/public_source/8d752b1f-cf21-490c-b4ba-bb494afcb669/0a35b23fc-43fc-463a-a26a-628f261b0fdb5035.png" alt="Henna Ceremony Table"></div>
+                    <div class="gallery-item"><img src="https://image.qwenlm.ai/public_source/8d752b1f-cf21-490c-b4ba-bb494afcb669/5a35b23fc-43fc-463a-a26a-628f261b0fdb1591.png" alt="Lantern Wedding Table"></div>
                 </div>
                 <button class="gallery-btn gallery-next" onclick="scrollGallery(1)"><i class="fas fa-chevron-right"></i></button>
                 <div class="gallery-dots" id="galleryDots"></div>
@@ -342,7 +340,6 @@
     </footer>
 
     <script>
-        // Translations Dictionary
         const translations = {
             en: {
                 nav_home: "Home", nav_about: "About Us", nav_services: "Services", nav_gallery: "Gallery", nav_contact: "Contact",
@@ -391,12 +388,9 @@
             }
         };
 
-        // Language Switcher Logic
         function setLanguage(lang) {
             document.getElementById('langSwitcher').value = lang;
             document.getElementById('mobileLangSwitcher').value = lang;
-            
-            // Handle RTL for Arabic
             if (lang === 'ar') {
                 document.body.classList.add('rtl');
                 document.documentElement.setAttribute('dir', 'rtl');
@@ -404,32 +398,25 @@
                 document.body.classList.remove('rtl');
                 document.documentElement.setAttribute('dir', 'ltr');
             }
-
-            // Update text
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) {
-                    el.textContent = translations[lang][key];
-                }
+                if (translations[lang][key]) { el.textContent = translations[lang][key]; }
             });
         }
 
         document.getElementById('langSwitcher').addEventListener('change', (e) => setLanguage(e.target.value));
         document.getElementById('mobileLangSwitcher').addEventListener('change', (e) => setLanguage(e.target.value));
 
-        // Mobile Menu Logic
         function toggleMenu() {
             document.getElementById('mobileNav').classList.toggle('active');
             document.getElementById('overlay').classList.toggle('active');
         }
 
-        // Gallery Scroll & Dots Logic
         const gallery = document.getElementById('galleryScroll');
         const dotsContainer = document.getElementById('galleryDots');
         const items = gallery.querySelectorAll('.gallery-item');
         let currentDot = 0;
 
-        // Create dots
         items.forEach((_, i) => {
             const dot = document.createElement('div');
             dot.classList.add('dot');
@@ -439,7 +426,7 @@
         });
 
         function scrollGallery(direction) {
-            const itemWidth = items[0].offsetWidth + 24; // width + gap
+            const itemWidth = items[0].offsetWidth + 24;
             gallery.scrollBy({ left: direction * itemWidth, behavior: 'smooth' });
         }
 
@@ -448,7 +435,6 @@
             gallery.scrollTo({ left: index * itemWidth, behavior: 'smooth' });
         }
 
-        // Update dots on scroll
         gallery.addEventListener('scroll', () => {
             const itemWidth = items[0].offsetWidth + 24;
             const newIndex = Math.round(gallery.scrollLeft / itemWidth);
