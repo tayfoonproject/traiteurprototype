@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dar Rbati Catering | High-End Event Caterer</title>
-    <meta name="description" content="A high-end event caterer in Rabat, Salé, and Témara. Refined Moroccan cuisine and turnkey service to make every one of your events unforgettable.">
+    <meta name="description" content="A high-end event caterer. Refined Moroccan cuisine and turnkey service.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,11 +26,12 @@
             --white: #FFFFFF;
             --font-heading: 'Playfair Display', serif;
             --font-body: 'Inter', sans-serif;
-            --section-padding: 5rem 1.5rem;
+            --section-padding: 6rem 1.5rem;
             --max-width: 1200px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         
         body {
             font-family: var(--font-body);
@@ -48,14 +49,9 @@
         /* --- UTILITIES --- */
         .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
         .btn {
-            display: inline-block;
-            padding: 0.9rem 2rem;
-            border-radius: 4px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            cursor: pointer;
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.9rem 2rem; border-radius: 4px;
+            font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; font-size: 0.85rem; cursor: pointer;
         }
         .btn-primary { background-color: var(--accent-color); color: var(--white); border: 2px solid var(--accent-color); }
         .btn-primary:hover { background-color: var(--accent-dark); border-color: var(--accent-dark); }
@@ -64,101 +60,103 @@
         .btn-dark { background-color: var(--dark-bg); color: var(--white); border: 2px solid var(--dark-bg); }
         .btn-dark:hover { background-color: var(--accent-color); border-color: var(--accent-color); }
         
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
-            width: 100%;
-        }
-        .section-title::after {
-            content: "❖";
-            display: block;
-            color: var(--accent-color);
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-        }
-        .section-subtitle { text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem; }
-
-        /* --- TOP BAR --- */
-        .top-bar { background-color: var(--dark-bg); color: var(--white); text-align: center; padding: 0.5rem; font-size: 0.85rem; letter-spacing: 1px; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 1rem; }
+        .section-title::after { content: "❖"; display: block; color: var(--accent-color); font-size: 1.2rem; margin-top: 0.5rem; }
 
         /* --- HEADER --- */
-        header { background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; max-width: var(--max-width); margin: 0 auto; }
+        header { background-color: rgba(253, 251, 247, 0.95); backdrop-filter: blur(10px); position: fixed; top: 0; width: 100%; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; max-width: 1400px; margin: 0 auto; }
         .logo { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700; color: var(--heading-color); }
         .logo span { color: var(--accent-color); }
+        
+        .nav-center { display: flex; gap: 2rem; align-items: center; }
         .nav-links { display: flex; gap: 2rem; align-items: center; }
         .nav-links a { font-weight: 500; font-size: 0.95rem; color: var(--heading-color); }
         .nav-links a:hover { color: var(--accent-color); }
+        
+        .lang-select { padding: 0.4rem 0.8rem; border: 1px solid #ddd; border-radius: 4px; font-family: var(--font-body); background: var(--white); cursor: pointer; }
+        
+        .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+        .phone-btn { background-color: var(--accent-color); color: var(--white); padding: 0.6rem 1.2rem; border-radius: 4px; font-weight: 600; font-size: 0.9rem; }
+        .phone-btn:hover { background-color: var(--accent-dark); color: var(--white); }
         .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; }
 
-        /* --- HERO --- */
+        /* --- HERO SECTION (Full Page) --- */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 85vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
-            padding: 0 1.5rem;
+            height: 100vh; width: 100%; margin: 0; padding: 0;
+            position: relative; display: flex; align-items: center; justify-content: center;
+            background: #000; color: var(--white); text-align: center;
         }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; color: var(--white); }
-        .hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto 2rem; font-weight: 300; }
+        /* Video Background Placeholder */
+        .hero-video-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; z-index: 1;
+        }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)); z-index: 2; }
+        
+        .hero-content { position: relative; z-index: 3; max-width: 900px; padding: 0 1.5rem; }
+        .hero-content h1 { font-size: 4rem; margin-bottom: 1.5rem; color: var(--white); line-height: 1.1; }
+        .hero-content p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 2.5rem; font-weight: 300; opacity: 0.9; }
+        
+        /* Video Play Button inside Hero */
+        .hero-video-trigger {
+            display: inline-flex; align-items: center; gap: 1rem; margin-bottom: 2.5rem;
+            cursor: pointer; transition: 0.3s;
+        }
+        .play-icon {
+            width: 60px; height: 60px; background: rgba(255,255,255,0.2); border: 2px solid var(--white); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 1.5rem; transition: 0.3s;
+        }
+        .hero-video-trigger:hover .play-icon { background: var(--accent-color); border-color: var(--accent-color); transform: scale(1.1); }
+        .hero-video-trigger span { font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
         .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
         /* --- STATS --- */
-        .stats { background-color: var(--white); padding: 3rem 1.5rem; border-bottom: 1px solid #eee; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center; max-width: var(--max-width); margin: 0 auto; }
-        .stat-item h3 { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 0.5rem; }
+        .stats { background-color: var(--white); padding: 4rem 1.5rem; border-bottom: 1px solid #eee; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; max-width: var(--max-width); margin: 0 auto; }
+        .stat-item h3 { font-size: 2.2rem; color: var(--accent-color); margin-bottom: 0.5rem; }
         .stat-item p { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-color); }
 
-        /* --- STORY & PERSONALISATION --- */
-        .story { padding: var(--section-padding); }
-        .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-        .story-content h2 { font-size: 2.2rem; margin-bottom: 1.5rem; }
-        .story-content p { margin-bottom: 1.5rem; }
+        /* --- ABOUT US --- */
+        .about { padding: var(--section-padding); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-img { height: 500px; border-radius: 8px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .about-img img { width: 100%; height: 100%; }
+        .about-content h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+        .about-content p { margin-bottom: 1.5rem; font-size: 1.05rem; }
         .check-list li { margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 0.8rem; }
         .check-list i { color: var(--accent-color); margin-top: 4px; }
-        
-        .personalisation { background-color: #F4F1EA; padding: var(--section-padding); }
-        .event-tags { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; justify-content: center; }
-        .tag { background: var(--white); padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.9rem; border: 1px solid #ddd; transition: 0.3s; }
-        .tag:hover { border-color: var(--accent-color); color: var(--accent-color); }
 
-        /* --- GALLERY --- */
+        /* --- PERSONALISATION --- */
+        .personalisation { background-color: #F4F1EA; padding: var(--section-padding); }
+        .pers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem 4rem; margin: 3rem 0; }
+        .pers-grid li { display: flex; align-items: flex-start; gap: 0.8rem; font-size: 1.05rem; }
+        .pers-grid i { color: var(--accent-color); margin-top: 4px; }
+        
+        .pers-description { text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.2rem; font-style: italic; color: var(--heading-color); font-family: var(--font-heading); }
+        
+        .event-tags { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem; }
+        .tag { background: var(--white); padding: 0.8rem 1.5rem; border-radius: 50px; font-size: 0.95rem; border: 1px solid #ddd; transition: 0.3s; font-weight: 500; }
+        .tag:hover { border-color: var(--accent-color); color: var(--accent-color); transform: translateY(-2px); }
+
+        /* --- GALLERY (Horizontal Scroll) --- */
         .gallery { padding: var(--section-padding); }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-        .gallery-item { height: 300px; overflow: hidden; border-radius: 4px; position: relative; }
+        .gallery-scroll {
+            display: flex; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory;
+            padding: 1rem 0 2rem; margin: 0 -1.5rem; padding-left: 1.5rem; padding-right: 1.5rem;
+            scrollbar-width: none; /* Firefox */
+        }
+        .gallery-scroll::-webkit-scrollbar { display: none; /* Chrome/Safari */ }
+        .gallery-item {
+            flex: 0 0 350px; height: 450px; scroll-snap-align: start; border-radius: 8px; overflow: hidden; position: relative;
+        }
         .gallery-item img { width: 100%; height: 100%; transition: transform 0.5s; }
         .gallery-item:hover img { transform: scale(1.05); }
 
-        /* --- VIDEO SECTION --- */
-        .video-section { background-color: var(--dark-bg); color: var(--white); padding: var(--section-padding); text-align: center; }
-        .video-placeholder { 
-            max-width: 800px; margin: 2rem auto 0; aspect-ratio: 16/9; background: #333; 
-            display: flex; align-items: center; justify-content: center; border-radius: 8px;
-            cursor: pointer; transition: 0.3s;
-        }
-        .video-placeholder:hover { background: #444; }
-        .video-placeholder i { font-size: 4rem; color: var(--accent-color); }
-
-        /* --- SERVICES --- */
-        .services { padding: var(--section-padding); }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-        .service-card { background: var(--white); padding: 2.5rem 2rem; text-align: center; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.3s; }
-        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .service-card i { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1.5rem; }
-        .service-card h3 { font-size: 1.4rem; margin-bottom: 1rem; }
-
         /* --- CTA --- */
-        .cta { background: linear-gradient(rgba(197, 160, 89, 0.9), rgba(197, 160, 89, 0.9)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80'); background-size: cover; padding: 5rem 1.5rem; text-align: center; color: var(--white); }
-        .cta h2 { color: var(--white); font-size: 2.5rem; margin-bottom: 1rem; }
-        .cta p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta { background: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; padding: 6rem 1.5rem; text-align: center; color: var(--white); }
+        .cta h2 { color: var(--white); font-size: 2.8rem; margin-bottom: 1rem; }
+        .cta p { font-size: 1.2rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9; }
 
         /* --- FOOTER --- */
         footer { background-color: var(--dark-bg); color: #ccc; padding: 4rem 1.5rem 2rem; }
@@ -166,49 +164,72 @@
         .footer-col h4 { color: var(--white); font-size: 1.2rem; margin-bottom: 1.5rem; }
         .footer-col p, .footer-col a { display: block; margin-bottom: 0.8rem; font-size: 0.95rem; }
         .footer-col a:hover { color: var(--accent-color); }
-        .social-links { display: flex; gap: 1rem; margin-top: 1rem; }
-        .social-links a { font-size: 1.3rem; }
         .footer-bottom { text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #333; font-size: 0.85rem; }
 
         /* --- RESPONSIVE --- */
+        @media (max-width: 992px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-grid, .pers-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .hero-content h1 { font-size: 3rem; }
+        }
         @media (max-width: 768px) {
-            .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--white); flex-direction: column; padding: 2rem; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
-            .nav-links.active { display: flex; }
+            .nav-links, .lang-select { display: none; }
             .mobile-menu-btn { display: block; }
-            .hero h1 { font-size: 2.5rem; }
-            .story-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .section-title { font-size: 2rem; }
+            .nav-center { display: none; } /* Simplified for mobile */
+            .nav-container { padding: 1rem; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .gallery-item { flex: 0 0 280px; height: 380px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Bar -->
-    <div class="top-bar">Rabat · Salé · Témara</div>
-
     <!-- Header -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo">Dar <span>Rbati</span></a>
-            <div class="mobile-menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
-            <nav class="nav-links" id="navLinks">
-                <a href="#story">Our Story</a>
-                <a href="#services">Services</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-                <a href="tel:+212666543505" class="btn btn-primary">Call Us</a>
-            </nav>
+            
+            <div class="nav-center">
+                <nav class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <select class="lang-select" onchange="changeLanguage(this.value)">
+                    <option value="en">🇬🇧 EN</option>
+                    <option value="fr">🇫🇷 FR</option>
+                    <option value="ar">🇲🇦 AR</option>
+                </select>
+            </div>
+
+            <div class="nav-right">
+                <a href="tel:+212700128980" class="phone-btn"><i class="fas fa-phone-alt"></i> +212 700 128 980</a>
+                <div class="mobile-menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div>
+    <!-- Hero Section (Full Page with Video Placeholder) -->
+    <section id="home" class="hero">
+        <!-- Placeholder for your video. Replace src with your actual video URL later -->
+        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1920&q=80" class="hero-video-bg" alt="Catering Background">
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <div class="hero-video-trigger" onclick="alert('This is where your promotional video will play!')">
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+                <span>Watch Our Story</span>
+            </div>
+            
             <h1>Dar Rbati Catering</h1>
-            <p>A high-end event caterer. Refined Moroccan cuisine and turnkey service to make every one of your events unforgettable.</p>
+            <p>A high-end event caterer. Refined Moroccan cuisine and manners to make every event unforgettable.</p>
+            
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Request a Quote</a>
-                <a href="tel:+212666543505" class="btn btn-outline">Call Us</a>
+                <a href="tel:+212700128980" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Call Us</a>
+                <a href="#gallery" class="btn btn-outline"><i class="fas fa-images"></i> Events Gallery</a>
             </div>
         </div>
     </section>
@@ -217,8 +238,8 @@
     <section class="stats">
         <div class="stats-grid">
             <div class="stat-item">
-                <h3>300+</h3>
-                <p>Events Catered</p>
+                <h3>+5 Years</h3>
+                <p>Of Experience</p>
             </div>
             <div class="stat-item">
                 <h3>100%</h3>
@@ -226,159 +247,131 @@
             </div>
             <div class="stat-item">
                 <h3>4.7 ★</h3>
-                <p>88 Google Reviews</p>
+                <p>Rating on Google Maps</p>
             </div>
             <div class="stat-item">
-                <h3>24/7</h3>
+                <h3>7/7</h3>
                 <p>At Your Service</p>
             </div>
         </div>
     </section>
 
-    <!-- Our Story -->
-    <section id="story" class="story">
+    <!-- About Us Section -->
+    <section id="about" class="about">
         <div class="container">
-            <div class="story-grid">
-                <div class="story-content">
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1555244162-803794f167d3?auto=format&fit=crop&w=800&q=80" alt="Dar Rbati Elegant Setup">
+                </div>
+                <div class="about-content">
                     <h2 class="section-title" style="text-align: left;">Our Story</h2>
-                    <p>Because every celebration is a unique moment for you and your loved ones, we do everything we can to make it a success. A premier caterer in Rabat, Salé and Témara, Dar Rbati brings you its craftsmanship, experience and logistical expertise to bring your finest receptions to life.</p>
+                    <p>Because every celebration is a unique moment for you and your loved ones, we do everything we can to make it a success. A premier caterer, Dar Rbati brings you its craftsmanship, experience and logistical expertise to bring your finest receptions to life.</p>
                     <ul class="check-list">
                         <li><i class="fas fa-check-circle"></i> Listening to your expectations during a personalised meeting.</li>
                         <li><i class="fas fa-check-circle"></i> A detailed proposal following that consultation.</li>
                         <li><i class="fas fa-check-circle"></i> Attentive follow-up throughout your event.</li>
                     </ul>
                 </div>
-                <div class="story-image">
-                    <img src="https://images.unsplash.com/photo-1555244162-803794f167d3?auto=format&fit=crop&w=800&q=80" alt="Elegant Moroccan Catering Setup" style="border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Personalisation -->
-    <section class="personalisation">
+    <!-- Personalisation Section -->
+    <section id="services" class="personalisation">
         <div class="container">
             <h2 class="section-title">Personalisation</h2>
-            <p class="section-subtitle">Your event is one of a kind. We help you design and imagine the reception that reflects you — true to Moroccan tradition, with a modern touch.</p>
-            <div class="story-grid">
-                <ul class="check-list">
+            <p style="text-align: center; max-width: 700px; margin: 0 auto;">Your event is one of a kind. We help you design and imagine the reception that reflects you — true to Moroccan tradition, with a modern touch.</p>
+            
+            <div class="pers-grid">
+                <ul>
                     <li><i class="fas fa-star"></i> Several service tiers with menus signed by our Chef.</li>
-                    <li><i class="fas fa-star"></i> A selection of culinary animations to amaze your guests.</li>
                     <li><i class="fas fa-star"></i> Floral ambiance and full styling of the venue.</li>
+                </ul>
+                <ul>
+                    <li><i class="fas fa-star"></i> A selection of culinary animations to amaze your guests.</li>
                     <li><i class="fas fa-star"></i> Bespoke table art: from simplicity to pure refinement.</li>
                 </ul>
-                <div>
-                    <p style="margin-bottom: 1rem;"><em>Dar Rbati and its team will craft a service worthy of your event, and a selection of refined menus to delight every one of your guests.</em></p>
-                    <div class="event-tags">
-                        <span class="tag">Weddings & Engagements</span>
-                        <span class="tag">Christenings & Births</span>
-                        <span class="tag">Birthdays & Henna</span>
-                        <span class="tag">Cocktail Receptions</span>
-                        <span class="tag">Business Lunches</span>
-                        <span class="tag">Automotive Events</span>
-                    </div>
-                </div>
+            </div>
+
+            <p class="pers-description">"Dar Rbati and its team will craft a service worthy of your event, and a selection of refined menus to delight every one of your guests."</p>
+
+            <div class="event-tags">
+                <span class="tag">Weddings & Engagements</span>
+                <span class="tag">Christenings & Births</span>
+                <span class="tag">Birthdays & Henna</span>
+                <span class="tag">Cocktail Receptions</span>
+                <span class="tag">Business Lunches</span>
+                <span class="tag">Automotive Events</span>
             </div>
         </div>
     </section>
 
-    <!-- Gallery -->
+    <!-- Gallery Section (Horizontal Scroll) -->
     <section id="gallery" class="gallery">
         <div class="container">
-            <h2 class="section-title">Our Finest Receptions</h2>
-            <div class="gallery-grid">
+            <h2 class="section-title">Our Finest Events</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #666;">Swipe to explore our recent celebrations</p>
+            
+            <div class="gallery-scroll">
                 <div class="gallery-item"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80" alt="Event 1"></div>
                 <div class="gallery-item"><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80" alt="Event 2"></div>
                 <div class="gallery-item"><img src="https://images.unsplash.com/photo-1530103862676-de3c9da59af7?auto=format&fit=crop&w=600&q=80" alt="Event 3"></div>
                 <div class="gallery-item"><img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=600&q=80" alt="Event 4"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80" alt="Event 5"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1478146059778-26028b07395a?auto=format&fit=crop&w=600&q=80" alt="Event 6"></div>
             </div>
         </div>
     </section>
 
-    <!-- Video Section -->
-    <section class="video-section">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">Dar Rbati in Motion</h2>
-            <div class="video-placeholder">
-                <i class="fas fa-play-circle"></i>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">What We Offer</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-utensils"></i>
-                    <h3>Cuisine</h3>
-                    <p>Refined Moroccan cuisine, elevated by fresh produce and the craft of our Chef. Traditional flavours reimagined with creativity.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-birthday-cake"></i>
-                    <h3>Pastry</h3>
-                    <p>For a special occasion or simply to treat yourself, our Moroccan and French pastry is the perfect way to satisfy your sweet tooth.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-couch"></i>
-                    <h3>Structure</h3>
-                    <p>To make your day unforgettable, we bring our logistics: furniture, table dressing, staging and a dedicated team of servers.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-leaf"></i>
-                    <h3>Décor</h3>
-                    <p>Stylish lighting, matching linens and floral decoration: it is often the details that impress your guests.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
+    <!-- CTA Section -->
     <section class="cta">
         <div class="container">
             <h2>Let's Talk About Your Event</h2>
             <p>Entrust us with your project: we bring our expertise, our professional eye and a tailored quote to fit your budget.</p>
-            <a href="https://wa.me/212666543505" class="btn btn-dark"><i class="fab fa-whatsapp"></i> Request a Quote on WhatsApp</a>
+            <a href="https://wa.me/212700128980" class="btn btn-primary" style="background: #25D366; border-color: #25D366;"><i class="fab fa-whatsapp"></i> Talk on WhatsApp</a>
         </div>
     </section>
 
-    <!-- Footer / Contact -->
+    <!-- Footer -->
     <footer id="contact">
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>Dar Rbati Catering</h4>
-                <p>A high-end event caterer bringing refined Moroccan cuisine and turnkey service to Rabat, Salé, and Témara.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="https://wa.me/212666543505"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Contact Us</h4>
-                <p><i class="fas fa-map-marker-alt" style="width: 20px;"></i> Immeuble 13, Résidence Machaa Lah 2<br>Lotissement Al Moustakbal, Témara 12020</p>
-                <p><i class="fas fa-phone" style="width: 20px;"></i> <a href="tel:+212666543505">+212 666 543 505</a></p>
-                <p><i class="fas fa-clock" style="width: 20px;"></i> Open 24/7 — Every day</p>
+                <p>A high-end event caterer bringing refined Moroccan cuisine and turnkey service to your most special moments.</p>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
-                <a href="#story">Our Story</a>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
                 <a href="#services">Services</a>
                 <a href="#gallery">Gallery</a>
-                <a href="https://wa.me/212666543505">Request a Quote</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-phone" style="width: 20px;"></i> <a href="tel:+212700128980">+212 700 128 980</a></p>
+                <p><i class="fas fa-envelope" style="width: 20px;"></i> contact@darrbati.com</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Dar Rbati Catering. All rights reserved. | Prototype for educational purposes.</p>
+            <p>&copy; 2024 Dar Rbati Catering. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Simple mobile menu toggle
+        // Mobile menu toggle
         function toggleMenu() {
-            const nav = document.getElementById('navLinks');
-            nav.classList.toggle('active');
+            alert("Mobile menu clicked! (You can expand this later)");
+        }
+
+        // Language Switcher (Visual Prototype)
+        function changeLanguage(lang) {
+            if(lang === 'ar') {
+                document.body.style.direction = 'rtl';
+                alert("Switched to Arabic layout (RTL). Full translation can be added next!");
+            } else {
+                document.body.style.direction = 'ltr';
+                alert("Switched to " + lang.toUpperCase() + ". Full translation can be added next!");
+            }
         }
     </script>
 </body>
